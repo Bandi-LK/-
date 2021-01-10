@@ -113,19 +113,19 @@ def moveFilesToAlbumDir(media_file_dir_path, classify_result_dir_path):
 
 # In[10]:
 
+if __name__ == "__main__":
+	media_file_dir_path = "C:\Users\luobi\Desktop\CloudMusic"   # 媒体文件路径 
+	classify_result_dir_path = "C:\Users\luobi\Desktop\ClassificMusic" # 分类结果路径
 
-media_file_dir_path = "C:/Users/luobi/Desktop/wait/"   # 媒体文件路径 
-classify_result_dir_path = "C:/Users/luobi/Desktop/dir_wait/" # 分类结果路径
-
-# 获取dir_path下所有媒体文件的路径及文件名,返回所有媒体文件的专辑
-list_media_album = getAllMediaFileAlbum(media_file_dir_path)
+	# 获取dir_path下所有媒体文件的路径及文件名,返回所有媒体文件的专辑
+	list_media_album = getAllMediaFileAlbum(media_file_dir_path)
 
 
-# 将所有的专辑名称创建文件夹
-for media_album in list_media_album:
-    mkdir(result_dir_path, media_album)
-    
-    
-# 将每首音乐移动到对应专辑文件夹下
-moveFilesToAlbumDir(media_file_dir_path, classify_result_dir_path)
+	# 将所有的专辑名称创建文件夹
+	for media_album in list_media_album:
+		mkdir(result_dir_path, media_album)
+		
+		
+	# 将每首音乐移动到对应专辑文件夹下
+	moveFilesToAlbumDir(media_file_dir_path, classify_result_dir_path)
 
